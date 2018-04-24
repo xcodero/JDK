@@ -12,8 +12,6 @@
         <module>jdk1.8</module>
         <module>jdk1.7</module>
         <module>jdk1.6</module>
-        <module>jdk1.9</module>
     </modules>
-
 
 </project>

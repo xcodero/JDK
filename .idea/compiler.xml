@@ -29,10 +29,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="jdk1.6" target="1.5" />
-      <module name="jdk1.7" target="1.5" />
-      <module name="jdk1.8" target="1.5" />
-      <module name="jdk1.9" target="1.5" />
+      <module name="jdk1.6" target="1.8" />
+      <module name="jdk1.7" target="1.8" />
+      <module name="jdk1.8" target="1.8" />
       <module name="jdks" target="1.5" />
     </bytecodeTargetLevel>
   </component>
