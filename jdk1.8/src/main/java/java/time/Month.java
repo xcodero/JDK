@@ -61,26 +61,19 @@
  */
 package java.time;
 
-import static java.time.temporal.ChronoField.MONTH_OF_YEAR;
-import static java.time.temporal.ChronoUnit.MONTHS;
-
 import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.format.TextStyle;
-import java.time.temporal.ChronoField;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalField;
-import java.time.temporal.TemporalQueries;
-import java.time.temporal.TemporalQuery;
-import java.time.temporal.UnsupportedTemporalTypeException;
-import java.time.temporal.ValueRange;
+import java.time.temporal.*;
 import java.util.Locale;
+
+import static java.time.temporal.ChronoField.MONTH_OF_YEAR;
+import static java.time.temporal.ChronoUnit.MONTHS;
 
 /**
  * A month-of-year, such as 'July'.
+ * <p>表示1年中的月份，如July。</p>
  * <p>
  * {@code Month} is an enum representing the 12 months of the year -
  * January, February, March, April, May, June, July, August, September, October,
@@ -103,6 +96,9 @@ import java.util.Locale;
  *
  * @since 1.8
  */
+// 月份
+// 1.月份的两种表达方式：JANUARY——对应枚举值的名称；8月——对应getValue返回值;
+// 2.该枚举表示许多日历系统中的都有的"1年中的月份"概念，实际上就是将1年划分为12段。
 public enum Month implements TemporalAccessor, TemporalAdjuster {
 
     /**

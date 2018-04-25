@@ -61,28 +61,13 @@
  */
 package java.time;
 
-import static java.time.temporal.ChronoUnit.DAYS;
-import static java.time.temporal.ChronoUnit.MONTHS;
-import static java.time.temporal.ChronoUnit.YEARS;
-
-import java.io.DataInput;
-import java.io.DataOutput;
-import java.io.IOException;
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.time.chrono.ChronoLocalDate;
 import java.time.chrono.ChronoPeriod;
 import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 import java.time.format.DateTimeParseException;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalAmount;
-import java.time.temporal.TemporalQueries;
-import java.time.temporal.TemporalUnit;
-import java.time.temporal.UnsupportedTemporalTypeException;
+import java.time.temporal.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -90,9 +75,12 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static java.time.temporal.ChronoUnit.*;
+
 /**
  * A date-based amount of time in the ISO-8601 calendar system,
  * such as '2 years, 3 months and 4 days'.
+ * <p>表示ISO-8601日历系统中基于日期的时间量（时间长度），如2年、3个月、4天。</p>
  * <p>
  * This class models a quantity or amount of time in terms of years, months and days.
  * See {@link Duration} for the time-based equivalent to this class.

@@ -65,6 +65,7 @@ import java.io.StreamCorruptedException;
 
 /**
  * The shared serialization delegate for this package.
+ * <p>该包中共享的序列化代理。</p>
  *
  * @implNote
  * This class wraps the object being serialized, and takes a byte representing the type of the class to

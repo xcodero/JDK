@@ -112,7 +112,8 @@ import static java.time.temporal.ChronoField.NANO_OF_SECOND;
 // 本地日期时间
 // 1.是一个不可变、线程安全的"日期-时间"对象；
 // 2.精确到纳秒；
-// 3.不带时区信息，只是日期（如生日）+挂钟里当地时间的描述。如果不加偏移或时区，无法表示时间线上的一点。
+// 3.不带时区信息，只是日期（如生日）+挂钟里当地时间的描述。如果不加偏移或时区，无法表示时间线上的一点；
+// 4.这是一个"基于值"的类，避免使用"身份敏感"操作，应该用equals方法进行比较。
 public final class LocalDateTime
         implements Temporal, TemporalAdjuster, ChronoLocalDateTime<LocalDate>, Serializable {
 

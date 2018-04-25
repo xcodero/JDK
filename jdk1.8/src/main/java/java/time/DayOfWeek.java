@@ -61,25 +61,17 @@
  */
 package java.time;
 
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.format.TextStyle;
+import java.time.temporal.*;
+import java.util.Locale;
+
 import static java.time.temporal.ChronoField.DAY_OF_WEEK;
 import static java.time.temporal.ChronoUnit.DAYS;
 
-import java.time.format.DateTimeFormatterBuilder;
-import java.time.format.TextStyle;
-import java.time.temporal.ChronoField;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalField;
-import java.time.temporal.TemporalQueries;
-import java.time.temporal.TemporalQuery;
-import java.time.temporal.UnsupportedTemporalTypeException;
-import java.time.temporal.ValueRange;
-import java.time.temporal.WeekFields;
-import java.util.Locale;
-
 /**
  * A day-of-week, such as 'Tuesday'.
+ * <p>表示1周中的天，如"Tuesday"。</p>
  * <p>
  * {@code DayOfWeek} is an enum representing the 7 days of the week -
  * Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.
@@ -106,6 +98,9 @@ import java.util.Locale;
  *
  * @since 1.8
  */
+// 星期几
+// 1.星期几的两种表达方式：TUESDAY——对应枚举值的名称；星期二——对应getValue返回值;
+// 2.该枚举表示许多日历系统中的都有的"1周中的天"概念，实际上就是将1周划分为7段。
 public enum DayOfWeek implements TemporalAccessor, TemporalAdjuster {
 
     /**
