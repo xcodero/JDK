@@ -67,6 +67,8 @@ import java.time.DateTimeException;
  * Framework-level interface defining read-write access to a temporal object,
  * such as a date, time, offset or some combination of these.
  * <p>
+ * 框架级接口——定义对"时间对象"的读写访问，如日期、时间、偏移或它们的组合。
+ * <p>
  * This is the base interface type for date, time and offset objects that
  * are complete enough to be manipulated using plus and minus.
  * It is implemented by those classes that can provide and manipulate information
@@ -126,6 +128,7 @@ import java.time.DateTimeException;
  *
  * @since 1.8
  */
+// 时间
 public interface Temporal extends TemporalAccessor {
 
     /**

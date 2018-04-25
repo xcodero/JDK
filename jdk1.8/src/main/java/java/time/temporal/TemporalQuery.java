@@ -66,6 +66,8 @@ import java.time.DateTimeException;
 /**
  * Strategy for querying a temporal object.
  * <p>
+ * 表示查询一个时间对象的策略。
+ * <p>
  * Queries are a key tool for extracting information from temporal objects.
  * They exist to externalize the process of querying, permitting different
  * approaches, as per the strategy design pattern.
@@ -99,6 +101,7 @@ import java.time.DateTimeException;
  *
  * @since 1.8
  */
+// 时间查询（策略）
 @FunctionalInterface
 public interface TemporalQuery<R> {
 

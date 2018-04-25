@@ -61,16 +61,6 @@
  */
 package java.time.format;
 
-import static java.time.temporal.ChronoField.DAY_OF_MONTH;
-import static java.time.temporal.ChronoField.DAY_OF_WEEK;
-import static java.time.temporal.ChronoField.DAY_OF_YEAR;
-import static java.time.temporal.ChronoField.HOUR_OF_DAY;
-import static java.time.temporal.ChronoField.MINUTE_OF_HOUR;
-import static java.time.temporal.ChronoField.MONTH_OF_YEAR;
-import static java.time.temporal.ChronoField.NANO_OF_SECOND;
-import static java.time.temporal.ChronoField.SECOND_OF_MINUTE;
-import static java.time.temporal.ChronoField.YEAR;
-
 import java.io.IOException;
 import java.text.FieldPosition;
 import java.text.Format;
@@ -83,19 +73,10 @@ import java.time.ZoneOffset;
 import java.time.chrono.Chronology;
 import java.time.chrono.IsoChronology;
 import java.time.format.DateTimeFormatterBuilder.CompositePrinterParser;
-import java.time.temporal.ChronoField;
-import java.time.temporal.IsoFields;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalField;
-import java.time.temporal.TemporalQuery;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.time.temporal.*;
+import java.util.*;
+
+import static java.time.temporal.ChronoField.*;
 
 /**
  * Formatter for printing and parsing date-time objects.
@@ -480,6 +461,7 @@ import java.util.Set;
  *
  * @since 1.8
  */
+// 日期时间格式化器
 public final class DateTimeFormatter {
 
     /**

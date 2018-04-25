@@ -70,6 +70,8 @@ import java.util.List;
  * Framework-level interface defining an amount of time, such as
  * "6 hours", "8 days" or "2 years and 3 months".
  * <p>
+ * 框架级接口——定义时间数量（多长时间），如6小时、8天、3个月。
+ * <p>
  * This is the base interface type for amounts of time.
  * An amount is distinct from a date or time-of-day in that it is not tied
  * to any specific point on the time-line.
@@ -96,6 +98,7 @@ import java.util.List;
  *
  * @since 1.8
  */
+// 时间量
 public interface TemporalAmount {
 
     /**

@@ -72,11 +72,15 @@ import java.time.chrono.ChronoZonedDateTime;
 /**
  * A unit of date-time, such as Days or Hours.
  * <p>
+ * 日期-时间的单位，如天、小时。
+ * <p>
  * Measurement of time is built on units, such as years, months, days, hours, minutes and seconds.
  * Implementations of this interface represent those units.
+ * <p>时间的测量是建立在单位的基础上，如年、月、日、天、时、分、秒。该接口的实现表示这些单位。</p>
  * <p>
  * An instance of this interface represents the unit itself, rather than an amount of the unit.
  * See {@link Period} for a class that represents an amount in terms of the common units.
+ * <p>该接口的实现表示单位本身，而不是一定数量的单位时间。Period类用来表示基于这些通用单位的量。</p>
  * <p>
  * The most commonly used units are defined in {@link ChronoUnit}.
  * Further units are supplied in {@link IsoFields}.

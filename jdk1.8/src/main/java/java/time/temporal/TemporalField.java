@@ -62,7 +62,6 @@
 package java.time.temporal;
 
 import java.time.DateTimeException;
-import java.time.chrono.Chronology;
 import java.time.format.ResolverStyle;
 import java.util.Locale;
 import java.util.Map;
@@ -70,6 +69,8 @@ import java.util.Objects;
 
 /**
  * A field of date-time, such as month-of-year or hour-of-minute.
+ * <p>
+ * 日期-时间的域。
  * <p>
  * Date and time is expressed using fields which partition the time-line into something
  * meaningful for humans. Implementations of this interface represent those fields.
@@ -91,6 +92,7 @@ import java.util.Objects;
  *
  * @since 1.8
  */
+// 时间域
 public interface TemporalField {
 
     /**

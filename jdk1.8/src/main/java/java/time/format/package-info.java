@@ -64,6 +64,7 @@
  * <p>
  * Provides classes to print and parse dates and times.
  * </p>
+ * <p>提供打印和解析日期、时间的类。</p>
  * <p>
  * Printing and parsing is based around the
  * {@link java.time.format.DateTimeFormatter DateTimeFormatter} class.
@@ -72,6 +73,7 @@
  * {@link java.time.format.DateTimeFormatterBuilder DateTimeFormatterBuilder}
  * can be used if more power is needed.
  * </p>
+ * <p>打印和解析是基于DateTimeFormatter类进行的。一般从DateTimeFormatter获取日期时间格式化器的实例，如果需要更多的功能，可使用DateTimeFormatterBuilder。</p>
  * <p>
  * Localization occurs by calling
  * {@link java.time.format.DateTimeFormatter#withLocale(java.util.Locale) withLocale(Locale)}
@@ -86,6 +88,7 @@
  * The Javadoc "@param" definition is used to summarise the null-behavior.
  * The "@throws {@link java.lang.NullPointerException}" is not explicitly documented in each method.
  * </p>
+ * <p>Javadoc中"@param"定义本身就用来概括null行为。</p>
  * <p>
  * All calculations should check for numeric overflow and throw either an {@link java.lang.ArithmeticException}
  * or a {@link java.time.DateTimeException}.

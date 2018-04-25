@@ -56,18 +56,8 @@
  */
 package java.time.temporal;
 
-import static java.time.DayOfWeek.THURSDAY;
-import static java.time.DayOfWeek.WEDNESDAY;
-import static java.time.temporal.ChronoField.DAY_OF_WEEK;
-import static java.time.temporal.ChronoField.DAY_OF_YEAR;
-import static java.time.temporal.ChronoField.EPOCH_DAY;
-import static java.time.temporal.ChronoField.MONTH_OF_YEAR;
-import static java.time.temporal.ChronoField.YEAR;
-import static java.time.temporal.ChronoUnit.DAYS;
-import static java.time.temporal.ChronoUnit.FOREVER;
-import static java.time.temporal.ChronoUnit.MONTHS;
-import static java.time.temporal.ChronoUnit.WEEKS;
-import static java.time.temporal.ChronoUnit.YEARS;
+import sun.util.locale.provider.LocaleProviderAdapter;
+import sun.util.locale.provider.LocaleResources;
 
 import java.time.DateTimeException;
 import java.time.Duration;
@@ -81,12 +71,16 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-import sun.util.locale.provider.LocaleProviderAdapter;
-import sun.util.locale.provider.LocaleResources;
+import static java.time.DayOfWeek.THURSDAY;
+import static java.time.DayOfWeek.WEDNESDAY;
+import static java.time.temporal.ChronoField.*;
+import static java.time.temporal.ChronoUnit.*;
 
 /**
  * Fields and units specific to the ISO-8601 calendar system,
  * including quarter-of-year and week-based-year.
+ * <p>
+ * 特定于ISO-8601日历系统的域和单位。
  * <p>
  * This class defines fields and units that are specific to the ISO calendar system.
  *

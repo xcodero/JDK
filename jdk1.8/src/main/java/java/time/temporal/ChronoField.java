@@ -56,19 +56,8 @@
  */
 package java.time.temporal;
 
-import static java.time.temporal.ChronoUnit.DAYS;
-import static java.time.temporal.ChronoUnit.ERAS;
-import static java.time.temporal.ChronoUnit.FOREVER;
-import static java.time.temporal.ChronoUnit.HALF_DAYS;
-import static java.time.temporal.ChronoUnit.HOURS;
-import static java.time.temporal.ChronoUnit.MICROS;
-import static java.time.temporal.ChronoUnit.MILLIS;
-import static java.time.temporal.ChronoUnit.MINUTES;
-import static java.time.temporal.ChronoUnit.MONTHS;
-import static java.time.temporal.ChronoUnit.NANOS;
-import static java.time.temporal.ChronoUnit.SECONDS;
-import static java.time.temporal.ChronoUnit.WEEKS;
-import static java.time.temporal.ChronoUnit.YEARS;
+import sun.util.locale.provider.LocaleProviderAdapter;
+import sun.util.locale.provider.LocaleResources;
 
 import java.time.DayOfWeek;
 import java.time.Instant;
@@ -79,8 +68,8 @@ import java.time.chrono.Chronology;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.ResourceBundle;
-import sun.util.locale.provider.LocaleProviderAdapter;
-import sun.util.locale.provider.LocaleResources;
+
+import static java.time.temporal.ChronoUnit.*;
 
 /**
  * A standard set of fields.
@@ -98,6 +87,7 @@ import sun.util.locale.provider.LocaleResources;
  *
  * @since 1.8
  */
+// 段域
 public enum ChronoField implements TemporalField {
 
     /**

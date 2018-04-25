@@ -61,17 +61,13 @@
  */
 package java.time.temporal;
 
-import static java.time.temporal.ChronoField.DAY_OF_MONTH;
-import static java.time.temporal.ChronoField.DAY_OF_WEEK;
-import static java.time.temporal.ChronoField.DAY_OF_YEAR;
-import static java.time.temporal.ChronoUnit.DAYS;
-import static java.time.temporal.ChronoUnit.MONTHS;
-import static java.time.temporal.ChronoUnit.YEARS;
-
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.function.UnaryOperator;
+
+import static java.time.temporal.ChronoField.*;
+import static java.time.temporal.ChronoUnit.*;
 
 /**
  * Common and useful TemporalAdjusters.
@@ -110,6 +106,7 @@ import java.util.function.UnaryOperator;
  * @see TemporalAdjuster
  * @since 1.8
  */
+// 静态工厂类，生产时间调整器
 public final class TemporalAdjusters {
 
     /**

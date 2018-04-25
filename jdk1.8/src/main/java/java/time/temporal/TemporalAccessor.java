@@ -68,6 +68,8 @@ import java.util.Objects;
  * Framework-level interface defining read-only access to a temporal object,
  * such as a date, time, offset or some combination of these.
  * <p>
+ * 框架级接口——定义对"时间对象"的只读访问，如日期、时间、偏移或它们的组合。
+ * <p>
  * This is the base interface type for date, time and offset objects.
  * It is implemented by those classes that can provide information
  * as {@linkplain TemporalField fields} or {@linkplain TemporalQuery queries}.
@@ -100,6 +102,7 @@ import java.util.Objects;
  *
  * @since 1.8
  */
+// 时间访问器
 public interface TemporalAccessor {
 
     /**
