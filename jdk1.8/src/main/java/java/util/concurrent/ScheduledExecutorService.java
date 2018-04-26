@@ -91,6 +91,7 @@ package java.util.concurrent;
  * @since 1.5
  * @author Doug Lea
  */
+// 1.被安排的执行器服务
 public interface ScheduledExecutorService extends ExecutorService {
 
     /**

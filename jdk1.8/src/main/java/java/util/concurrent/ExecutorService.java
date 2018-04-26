@@ -134,6 +134,7 @@ import java.util.Collection;
  * @since 1.5
  * @author Doug Lea
  */
+// 执行器服务——提供管理终止的方法，以及产生一个进度条来跟踪一个或多个异步任务的方法的执行器；
 public interface ExecutorService extends Executor {
 
     /**

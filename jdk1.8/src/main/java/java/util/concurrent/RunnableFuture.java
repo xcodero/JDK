@@ -45,6 +45,7 @@ package java.util.concurrent;
  * @author Doug Lea
  * @param <V> The result type returned by this Future's {@code get} method
  */
+// 1.带进度条的可执行
 public interface RunnableFuture<V> extends Runnable, Future<V> {
     /**
      * Sets this Future to the result of its computation

@@ -112,9 +112,9 @@ package java.util.concurrent;
  * }}</pre>
  *
  * The {@code Executor} implementations provided in this package
- * implement {@link ExecutorService}, which is a more extensive
+ * implement {@link ExecutorService}, which is a more extensive（更加扩展的——提供更多功能的）
  * interface.  The {@link ThreadPoolExecutor} class provides an
- * extensible thread pool implementation. The {@link Executors} class
+ * extensible（可扩展的） thread pool implementation. The {@link Executors} class
  * provides convenient factory methods for these Executors.
  *
  * <p>Memory consistency effects: Actions in a thread prior to

@@ -60,6 +60,9 @@ import java.util.concurrent.locks.LockSupport;
  * @author Doug Lea
  * @param <V> The result type returned by this FutureTask's {@code get} methods
  */
+// 1.带进度条的任务——可取消的异步计算；
+// 2.Runable、Callable都可以被包装为"带进度条的任务"；
+// 3.可以将FutureTask提交给Executor执行。
 public class FutureTask<V> implements RunnableFuture<V> {
     /*
      * Revision notes: This differs from previous versions of this

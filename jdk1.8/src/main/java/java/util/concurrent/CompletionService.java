@@ -58,6 +58,8 @@ package java.util.concurrent;
  * actions taken by that task, which in turn <i>happen-before</i>
  * actions following a successful return from the corresponding {@code take()}.
  */
+// 完成服务——解耦新异步任务的生产和已完成任务结果的消费；
+// 生产者提交需要执行的任务，消费者取走已完成任务并按照完成顺序处理执行结果。
 public interface CompletionService<V> {
     /**
      * Submits a value-returning task for execution and returns a Future

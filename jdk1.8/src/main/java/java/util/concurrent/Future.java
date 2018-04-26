@@ -93,6 +93,9 @@ package java.util.concurrent;
  * @author Doug Lea
  * @param <V> The result type returned by this Future's {@code get} method
  */
+// 1.进度条——表示异步计算的结果；
+// 2.提供a)检测计算是否完成、b)等待计算完成、c)获取计算结果的方法；
+// 3.如果为了可取消性而不是为了有用的结果而使用Future，可将类型声明为Future<?>，并让底层任务返回null作为结果；
 public interface Future<V> {
 
     /**

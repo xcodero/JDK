@@ -54,6 +54,9 @@ package java.util.concurrent;
  * @author Doug Lea
  * @param <V> the result type of method {@code call}
  */
+// 可调用的——表示返回结果或抛出异常的任务；
+// 跟Runable类似，两者都表示实现类的实例可能会被另一个线程执行；
+// Runable不返回结果且不能抛出已检查异常。
 @FunctionalInterface
 public interface Callable<V> {
     /**

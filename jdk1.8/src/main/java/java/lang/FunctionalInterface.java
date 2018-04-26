@@ -62,6 +62,11 @@ import java.lang.annotation.*;
  * @jls 9.4.3 Interface Method Body
  * @since 1.8
  */
+// 函数式接口——这是一个标记接口，表名某个接口类型打算设计为Java语言规范中定义的函数式接口；
+// 从概念上讲，一个函数式接口有且只有一个抽象方法。默认方法、覆盖java.lang.Object中公有方法的抽象方法，都不属于"函数式接口"定义中的抽象方法；
+// 在使用Lambda表达式、方法引用、构造器引用的地方会创建函数式接口的实例；
+// 该接口只是通知编译器进行检查被注解的接口类型是否满足"函数式接口"的定义；
+// 如果一个满足"函数式接口"定义的接口类型没有使用该注解，编译器还是把它当作函数式接口对待。
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
