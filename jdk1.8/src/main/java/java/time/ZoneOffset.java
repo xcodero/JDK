@@ -61,33 +61,19 @@
  */
 package java.time;
 
-import static java.time.LocalTime.MINUTES_PER_HOUR;
-import static java.time.LocalTime.SECONDS_PER_HOUR;
-import static java.time.LocalTime.SECONDS_PER_MINUTE;
-import static java.time.temporal.ChronoField.OFFSET_SECONDS;
-
-import java.io.DataInput;
-import java.io.DataOutput;
-import java.io.IOException;
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
-import java.time.temporal.ChronoField;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalField;
-import java.time.temporal.TemporalQueries;
-import java.time.temporal.TemporalQuery;
-import java.time.temporal.UnsupportedTemporalTypeException;
-import java.time.temporal.ValueRange;
+import java.io.*;
+import java.time.temporal.*;
 import java.time.zone.ZoneRules;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+import static java.time.LocalTime.*;
+import static java.time.temporal.ChronoField.OFFSET_SECONDS;
+
 /**
  * A time-zone offset from Greenwich/UTC, such as {@code +02:00}.
+ * <p>该时区距离Greenwich/UTC的偏移量，如：+02:00</p>
  * <p>
  * A time-zone offset is the amount of time that a time-zone differs from Greenwich/UTC.
  * This is usually a fixed number of hours and minutes.

@@ -87,7 +87,7 @@ import static java.time.temporal.ChronoUnit.*;
  *
  * @since 1.8
  */
-// 段域
+// 时间长度域
 public enum ChronoField implements TemporalField {
 
     /**

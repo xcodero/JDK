@@ -69,6 +69,7 @@ import java.util.Objects;
 
 /**
  * A geographical region where the same time-zone rules apply.
+ * <p>使用相同时区规则的地理区域。</p>
  * <p>
  * Time-zone information is categorized as a set of rules defining when and
  * how the offset from UTC/Greenwich changes. These rules are accessed using

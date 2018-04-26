@@ -74,7 +74,7 @@ import java.time.Duration;
  *
  * @since 1.8
  */
-// 段单位
+// 时间长度单位
 public enum ChronoUnit implements TemporalUnit {
 
     /**

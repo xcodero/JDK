@@ -61,40 +61,22 @@
  */
 package java.time;
 
-import static java.time.LocalTime.NANOS_PER_HOUR;
-import static java.time.LocalTime.NANOS_PER_MINUTE;
-import static java.time.LocalTime.NANOS_PER_SECOND;
-import static java.time.LocalTime.SECONDS_PER_DAY;
+import java.io.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.temporal.*;
+import java.time.zone.ZoneRules;
+import java.util.Objects;
+
+import static java.time.LocalTime.*;
 import static java.time.temporal.ChronoField.NANO_OF_DAY;
 import static java.time.temporal.ChronoField.OFFSET_SECONDS;
 import static java.time.temporal.ChronoUnit.NANOS;
 
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
-import java.io.InvalidObjectException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.time.temporal.ChronoField;
-import java.time.temporal.ChronoUnit;
-import java.time.temporal.Temporal;
-import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalAmount;
-import java.time.temporal.TemporalField;
-import java.time.temporal.TemporalQueries;
-import java.time.temporal.TemporalQuery;
-import java.time.temporal.TemporalUnit;
-import java.time.temporal.UnsupportedTemporalTypeException;
-import java.time.temporal.ValueRange;
-import java.time.zone.ZoneRules;
-import java.util.Objects;
-
 /**
  * A time with an offset from UTC/Greenwich in the ISO-8601 calendar system,
  * such as {@code 10:15:30+01:00}.
+ * <p>ISO-8601日历系统中带有距离UTC/Greenwich偏移量的时间，如10:15:30+01:00</p>
  * <p>
  * {@code OffsetTime} is an immutable date-time object that represents a time, often
  * viewed as hour-minute-second-offset.

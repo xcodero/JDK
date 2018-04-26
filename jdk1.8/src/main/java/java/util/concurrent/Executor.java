@@ -125,6 +125,9 @@ package java.util.concurrent;
  * @since 1.5
  * @author Doug Lea
  */
+// 1.执行器——执行提交的Runable任务的对象；
+// 2.将任务提交和任务如何执行（包括线程使用、线程调度等细节）解耦；
+// 3.Executor并没有规定任务必须是异步执行。
 public interface Executor {
 
     /**

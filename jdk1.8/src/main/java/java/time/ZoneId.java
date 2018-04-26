@@ -86,6 +86,7 @@ import java.util.TimeZone;
 
 /**
  * A time-zone ID, such as {@code Europe/Paris}.
+ * <p>时区ID，如Europe/Paris</p>
  * <p>
  * A {@code ZoneId} is used to identify the rules used to convert between
  * an {@link Instant} and a {@link LocalDateTime}.

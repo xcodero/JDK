@@ -141,6 +141,9 @@ package java.util;
  * @author Doug Lea
  * @param <E> the type of elements held in this collection
  */
+// 1. 队列——用来保存待处理元素的集合；
+// 2. 队列除了提供基本的集合操作外，还提供额外的插入、删除、检查操作；
+// 3. 每种操作都分两种形式：操作失败返回异常的形式、操作失败返回特殊值的形式；
 public interface Queue<E> extends Collection<E> {
     /**
      * Inserts the specified element into this queue if it is possible to do so
