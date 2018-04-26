@@ -24,7 +24,12 @@
  */
 
 package java.util;
-import java.io.*;
+import sun.misc.Unsafe;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.ObjectStreamField;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.DoubleConsumer;
 import java.util.function.IntConsumer;
@@ -33,8 +38,6 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.StreamSupport;
-
-import sun.misc.Unsafe;
 
 /**
  * An instance of this class is used to generate a stream of
@@ -73,6 +76,13 @@ import sun.misc.Unsafe;
  * @author  Frank Yellin
  * @since   1.0
  */
+// 0.随机的
+// 1.该类的实例用于产生伪随机数的流；
+// 2.如果使用相同的seed创建两个Random实例，并且对它们使用相同的方法调用序列，应该产生并返回相同的数值序列；
+// 3.Math.random方法更容易使用；
+// 4.该类是线程安全的；
+// 5.但是，在线程间并发使用Random实例可能出现竞争，导致性能不佳；
+// 6.在多线程环境中，推荐使用java.util.concurrent.ThreadLocalRandom。
 public
 class Random implements java.io.Serializable {
     /** use serialVersionUID from JDK 1.1 for interoperability */

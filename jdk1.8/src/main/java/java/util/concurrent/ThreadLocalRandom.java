@@ -79,6 +79,10 @@ import java.util.stream.StreamSupport;
  * @since 1.7
  * @author Doug Lea
  */
+// 0.线程本地随机的
+// 1.孤立于当前线程的随机数生成器；
+// 2.Math.random方法中使用的是Random单例；
+// 3.在并发程序中使用ThreadLocalRandom比使用共享的Random单例会减少开销和竞争。
 public class ThreadLocalRandom extends Random {
     /*
      * This class implements the java.util.Random API (and subclasses

@@ -46,6 +46,7 @@ package java.util.concurrent;
  * @since 1.5
  * @author Doug Lea
  */
+// 1.mix-in风格的接口，表明对象应该在给定时间延迟后采取行动
 public interface Delayed extends Comparable<Delayed> {
 
     /**
